@@ -1,17 +1,17 @@
 {
   "name": "unplugin-whistle-proxy",
   "type": "module",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "packageManager": "pnpm@9.9.0",
   "description": "",
   "license": "MIT",
-  "homepage": "https://github.com/antfu/unplugin-whistle-proxy#readme",
+  "homepage": "https://github.com/allenhush/unplugin-whistle-proxy#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/antfu/unplugin-whistle-proxy.git"
+    "url": "git+https://github.com/allenhush/unplugin-whistle-proxy.git"
   },
   "bugs": {
-    "url": "https://github.com/antfu/unplugin-whistle-proxy/issues"
+    "url": "https://github.com/allenhush/unplugin-whistle-proxy/issues"
   },
   "keywords": [
     "unplugin",
