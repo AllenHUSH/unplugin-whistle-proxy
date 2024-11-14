@@ -1,3 +1,5 @@
-export interface Options {
-  // define your plugin options here
+import type { WhistleOptions } from 'whistle'
+
+export interface Options extends WhistleOptions {
+  rulePath?: string
 }
