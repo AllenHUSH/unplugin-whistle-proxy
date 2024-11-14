@@ -2,39 +2,40 @@
 
 [![NPM version](https://img.shields.io/npm/v/unplugin-whistle-proxy?color=a1b858&label=)](https://www.npmjs.com/package/unplugin-whistle-proxy)
 
-Starter template for [unplugin](https://github.com/unjs/unplugin).
+> Starter template for [unplugin](https://github.com/unjs/unplugin).
 
-## Template Usage
+## What's this?
+A simple plugin for whistle proxy.
 
-To use this template, clone it down using:
-
-```bash
-npx degit unplugin/unplugin-whistle-proxy my-unplugin
-```
-
-And do a global replacement of `unplugin-whistle-proxy` with your plugin name.
-
-Then you can start developing your unplugin 🔥
-
-To test your plugin, run: `pnpm run dev`
-To release a new version, run: `pnpm run release`
+Start a whistle proxy server when developing, and automatically select the rule.
 
 ## Install
 
 ```bash
-npm i unplugin-whistle-proxy
+npm i unplugin-whistle-proxy --dev
+pnpm add unplugin-whistle-proxy -D
+yarn add unplugin-whistle-proxy -D
 ```
+
+Create a `proxy-rule` file in the root directory of your project.
+
+```plaintext
+// proxy-rule
+helloworld.com localhost:5173
+```
+
+And then add the following code to enable the plugin.
 
 <details>
 <summary>Vite</summary><br>
 
 ```ts
 // vite.config.ts
-import Starter from 'unplugin-whistle-proxy/vite'
+import whistle from 'unplugin-whistle-proxy/vite'
 
 export default defineConfig({
   plugins: [
-    Starter({ /* options */ }),
+    whistle({ /* options */ }),
   ],
 })
 ```
@@ -48,11 +49,11 @@ Example: [`playground/`](./playground/)
 
 ```ts
 // rollup.config.js
-import Starter from 'unplugin-whistle-proxy/rollup'
+import whistle from 'unplugin-whistle-proxy/rollup'
 
 export default {
   plugins: [
-    Starter({ /* options */ }),
+    whistle({ /* options */ }),
   ],
 }
 ```
@@ -112,10 +113,10 @@ module.exports = {
 ```ts
 // esbuild.config.js
 import { build } from 'esbuild'
-import Starter from 'unplugin-whistle-proxy/esbuild'
+import whistle from 'unplugin-whistle-proxy/esbuild'
 
 build({
-  plugins: [Starter()],
+  plugins: [whistle()],
 })
 ```
 
