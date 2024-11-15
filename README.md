@@ -2,14 +2,21 @@
 
 [![NPM version](https://img.shields.io/npm/v/unplugin-whistle-proxy?color=a1b858&label=)](https://www.npmjs.com/package/unplugin-whistle-proxy)
 
-> Starter template for [unplugin](https://github.com/unjs/unplugin).
-
 ## What's this?
-A simple plugin for whistle proxy.
+
+A proxy plugin for build tools implemented by whistle.
 
 Start a whistle proxy server when developing, and automatically select the rule.
 
-## Install
+## Features
+
+- 👌 Ready to use
+- 🔥 Hot reload
+- 📃 All rules in one file
+
+## Usage
+
+### 1. Install
 
 ```bash
 npm i unplugin-whistle-proxy --dev
@@ -17,12 +24,16 @@ pnpm add unplugin-whistle-proxy -D
 yarn add unplugin-whistle-proxy -D
 ```
 
+### 2. Write rules
+
 Create a `proxy-rule` file in the root directory of your project.
 
 ```plaintext
 // proxy-rule
 helloworld.com localhost:5173
 ```
+
+### 3. Add plugin to build tools
 
 And then add the following code to enable the plugin.
 
@@ -121,3 +132,15 @@ build({
 ```
 
 <br></details>
+
+## Options
+
+```ts
+interface Options extends WhistleOptions {
+  /**
+   * Rule file path
+   * @default './proxy-rule'
+   */
+  rulePath?: string
+}
+```

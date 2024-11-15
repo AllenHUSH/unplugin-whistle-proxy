@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.1.2",
   "packageManager": "pnpm@9.9.0",
-  "description": "",
+  "description": "A proxy plugin for build tools implemented by whistle.",
   "license": "MIT",
   "homepage": "https://github.com/allenhush/unplugin-whistle-proxy#readme",
   "repository": {
@@ -18,7 +18,9 @@
     "vite",
     "webpack",
     "rollup",
-    "transform"
+    "transform",
+    "proxy",
+    "whistle"
   ],
   "exports": {
     ".": {
